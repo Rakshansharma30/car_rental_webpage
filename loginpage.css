@@ -1,0 +1,123 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Ensure the animation covers the entire viewport */
+}
+
+.background-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://www.ecorentacar.com/wp-content/uploads/2019/03/Luxury-Fleet-Banner.jpg");
+  animation: animateBackground 30s linear infinite;
+   z-index: -1;/* Ensure the animation stays behind other content */
+}
+
+.login-container {
+  position: relative; /* Ensure the login container stays above the background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}  
+.login-form {
+  background-color: rgba(47, 44, 45, 0.622);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #2196F3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: #0b7dda;
+  transform: scale(1.3);
+}
+
+.forgot-password {
+  text-align: center;
+}
+
+.forgot-password a {
+  color: #2196F3;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+.or{
+  text-align: center;
+  text-decoration: rgba(0, 0, 0, 0.249);
+}
+.signup {
+  text-align: center;
+  width: 500px;
+}
+
+.signup a {
+  color: #001ba1;
+  text-decoration: none;
+}
+
+.signup a:hover {
+  text-decoration: underline;
+}
+button[type="Submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #2196F3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="Submit"]:hover {
+  background-color: #0b7dda;
+}
+@keyframes animateBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Rental Login</title>
+<link rel="stylesheet" href="loginpage.css">
+</head>
+<body>
+<div class="background-animation"></div>
+<div class="login-container">
+  <form class="login-form" onsubmit="return validateForm()" action="http://localhost:5500/login" method="post">
+    <h2>Login to Your Account</h2>
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username">
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password">
+      <p id="password-temp-message" class="temp-message"></p>
+    </div>
+    <button type="submit">Login</button>
+    <p class="forgot-password"><a href="#">Forgot Password?</a></p>
+    <p class="or">or</p>
+    <button type="submit" onclick="window.location.href='rentalsignup-form.html'">Signup</button>
+  </form>
+</div>
+
+<script>
+  const passwordInput = document.getElementById('password');
+  const tempMessage = document.getElementById('password-temp-message');
+
+  function validateForm() {
+    const password = passwordInput.value;
+
+    // Regular expressions for password validation
+    const uppercaseRegex = /[A-Z]/;
+    const lowercaseRegex = /[a-z]/;
+    const numberRegex = /[0-9]/;
+    const specialCharacterRegex = /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/;
+
+    // Check if the password meets the requirements
+    const isUppercase = uppercaseRegex.test(password);
+    const isLowercase = lowercaseRegex.test(password);
+    const isNumber = numberRegex.test(password);
+    const isSpecialCharacter = specialCharacterRegex.test(password);
+
+    // Display temporary message based on password requirements
+    let message = "";
+    if (password.length < 8) {
+      message = "Password must be at least 8 characters long";
+    } else if (!isUppercase) {
+      message = "Password must contain at least one uppercase letter";
+    } else if (!isLowercase) {
+      message = "Password must contain at least one lowercase letter";
+    } else if (!isNumber) {
+      message = "Password must contain at least one number";
+    } else if (!isSpecialCharacter) {
+      message = "Password must contain at least one special character";
+    }
+
+    tempMessage.textContent = message;
+    tempMessage.style.display = message ? "block" : "none";
+    
+    return message === "";
+  } 
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Rental Booking</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+    <header>
+        <h1>Car Rental Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="carrental.html">Home</a></li>
+                <li><a href="vehicles.html">Vehicles</a></li>
+                <li><a href="booking.html">Bookings</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="booking">
+            <h2>Book Your Car</h2>
+            <p>Select your desired vehicle, pickup location, destination, and rental dates to make a booking.</p>
+            <div class="booking-container">
+                <div class="booking-form">
+                    <h3>Booking Details</h3>
+                    <form action="http://localhost:5500/booking" method="post">
+                        <label for="vehicle">Select Vehicle:</label>`
+                        <select id="vehicle" name="vehicle" required>
+                            <option value="">Select Vehicle</option>
+                            <option value="mustang">Ford Mustang Black Horse</option>
+                            <option value="swift">Maruti Suzuki Swift</option>
+                            <option value="creta">Hyundai Creta</option>
+                            <option value="nexon">Tata Nexon</option>
+                            <option value="scorpio">Mahindra Scorpio</option>
+                            <option value="city">Honda City</option>
+                            <option value="fortuner">Toyota Fortuner</option>
+                            <option value="seltos">Kia Seltos</option>
+                            <option value="duster">Renault Duster</option>
+                            <option value="octavia">Skoda Octavia</option>
+                        </select>
+                        <!-- <table><tr>
+                            <th>DriverID</th>
+                            <th>Name</th>
+                            <th>LicenseNumber</th>
+                            <th>ContactNumber</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="driverID" placeholder="IN NUMBER"></td>
+                            <td><input type="text" name="name"></td>
+                            <td><input type="text" name="licenseNumber"></td>
+                            <td><input type="text" name="contactNumber"></td>
+                            <td><input type="text" name="email"></td>
+                            <td><input type="text" name="address"></td>
+                        </tr>
+                        </table> -->
+                        <label for="pickup-location">Pickup Location:</label>
+                        <input type="text" id="pickup-location" name="pickup-location" required>
+                        <label for="destination">Destination:</label>
+                        <input type="text" id="destination" name="destination" required>
+                        <label for="start-date">Start Date:</label>
+                        <input type="date" id="start-date" name="start-date" required>
+                        <label for="end-date">End Date:</label>
+                        <input type="date" id="end-date" name="end-date" required>
+                        <button type="submit">Book Now</button>
+                    </form>
+                </div>
+                <div class="booking-info">
+                    <h3>Rental Information</h3>
+                    <p><strong>Rental Rates:</strong></p>
+                    <ul>
+                        <li>Ford Mustang Black Horse: ₹9999/day</li>
+                        <li>Maruti Suzuki Swift: ₹1500/day</li>
+                        <li>Hyundai Creta: ₹2500/day</li>
+                        <li>Tata Nexon: ₹1800/day</li>
+                        <li>Mahindra Scorpio: ₹2200/day</li>
+                        <li>Honda City: ₹2000/day</li>
+                        <li>Toyota Fortuner: ₹3000/day</li>
+                        <li>Kia Seltos: ₹2300/day</li>
+                        <li>Renault Duster: ₹1900/day</li>
+                        <li>Skoda Octavia: ₹2700/day</li>
+                    </ul>
+                    <p>Additional charges may apply for extra mileage, late returns, or damages.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Car Rental Management System</p>
+    </footer>
+</body>
+</html>

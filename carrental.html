@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Car Rental Management System</title>
+    <link rel="stylesheet" href="carstyle.css">
+</head>
+<!-- <style>/* Reset styles */
+  body, h1, h2, h3, p, ul, li, form, button {
+      margin: 0;
+      padding: 0;
+  }
+  body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f0f0f0;
+  }
+  img {
+      width: 300px;
+      height: 250px;
+  }
+  header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: left;
+      position: relative;
+      width: 100%;
+    }                                                        
+  
+  header h1 {
+      margin: 0;
+  }
+  .bookings{
+      display: inline-block;
+  }
+  nav ul {
+      list-style-type: none;
+  }
+  
+  nav ul li {
+      display: inline;
+      margin-right: 20px;
+  }
+  
+  nav ul li a {
+      color: #fff;
+      text-decoration: none;
+  }
+  
+  main {
+      padding: 20px;
+  }
+  
+  section {
+      margin-bottom: 40px;
+  }
+  
+  footer {
+      background-color: #333;
+      color: rgb(0, 0, 0);
+      padding: 20px;
+      margin-top: auto;
+    }
+    .view-all-cars{
+      text-align: left;
+      text-decoration: solid  ;
+      font-style: oblique;
+  }
+    .car-grid {
+      display: grid;
+      height: 450px;
+      align-content: space-around;
+      grid-template-columns: auto auto auto;
+      gap: 10px;
+      background-color: #2196F3;
+      padding: 10px;
+    }
+    .car-card {
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      padding: 10px 0;
+      font-size: 15px;
+    }
+   </style> -->
+<body>
+    <header>
+        <h1>Car Rental Management System</h1>
+        <nav>
+          <ul>
+            <li><a href="carrental.html">Home</a></li>
+            <li><a href="vehicles.html">Vehicles</a></li>
+            <li><a href="booking.html">Bookings</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="vehicles"><br>
+            <h1>Featured Cars</h1>
+            <div class="car-grid">
+              <div class="car-card">
+                <a href="https://www.cardekho.com/overview/Hyundai_Creta_2020-2024/Hyundai_Creta_2020-2024_S_Plus_Knight_BSVI.htm">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/2022_Hyundai_Creta_1.6_Plus_%28Chile%29_front_view.jpg/1200px-2022_Hyundai_Creta_1.6_Plus_%28Chile%29_front_view.jpg" alt="Hyundai Creta">
+                </a>
+                <div class="car-info">
+                  <h2><a href="https://www.cardekho.com/overview/Hyundai_Creta_2020-2024/Hyundai_Creta_2020-2024_S_Plus_Knight_BSVI.htm">Hyundai Creta</a></h2>
+                  <p class="price">Starting at ₹2500/day</p>
+
+                </div>
+              </div>
+              <div class="car-card">
+                <a href="#">
+                  <img src="https://stimg.cardekho.com/images/car-images/large/Hyundai/Hyundai-Verna/Sleek-Silver.jpg?impolicy=resize&imwidth=420" alt="Verna">
+                </a>
+                <div class="car-info">
+                  <h2><a href="#">Hyundai Verna</a></h2>
+                  <p class="price">Starting at ₹2500/day</p>
+                </div>
+              </div>
+          
+              <div class="car-card">
+                <a href="#">
+                  <img src="https://stimg.cardekho.com/images/carexteriorimages/930x620/Maruti/Swift/10406/1697698080681/front-left-side-47.jpg" alt="swift">
+                </a>
+                <div class="car-info">
+                  <h2><a href="#">Maruti Swift</a></h2>
+                  <p class="price">Starting at ₹1500/day</p>
+                </div>
+              </div>
+              <a href="vehicles.html" class="view-all-cars">View All Cars</a>
+              </div><br>
+          </section>
+
+        <section id="bookings">
+            <h2>Make your Booking</h2>
+            <form id="booking-form">
+                <label for="vehicle">Select Vehicle:</label>
+                <select id="vehicle" name="vehicle">
+                    <option value="value 1">select</option>
+                    <option value="value 2">Creta</option>
+                    <option value="value 3">Verna</option>
+                    <option value="value 4">Swift</option>
+                    <option value="value 5">sx4</option>
+                </select>
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date" name="start-date">
+                <label for="end-date">End Date:</label>
+                <input type="date" id="end-date" name="end-date"><br>
+                <a href="booking.html"><button type="submit" >Book Now</button></a>
+            </form>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or inquiries, please contact us:</p>
+            <address>
+                Email: carrental@gmail.com<br>
+                Phone: 7303189559
+            </address>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Car Rental Management System</p>
+    </footer>
+</body>
+</html>
